@@ -1,0 +1,15 @@
+/* Styles for fonts, line-height, paragraphs, h1, h2, h3 ... */
+body {
+  font-family: $font-text;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+}
+
+p {
+  font-family: $font-text;
+}
+
+a, button, span {
+  font-family: $font-links;
+}
