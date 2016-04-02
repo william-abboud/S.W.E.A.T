@@ -1,1 +1,5 @@
-console.log('pesho');
+'use strict';
+
+(function () {
+  console.log('Hello World');
+}());
