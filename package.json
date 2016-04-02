@@ -1,0 +1,37 @@
+{
+  "name": "sweat",
+  "version": "1.0.0",
+  "description": "Personal tool for reaching your fitness goals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/william-abboud/S.W.E.A.T.git"
+  },
+  "keywords": [
+    "Fitness",
+    "Gains",
+    "Workout"
+  ],
+  "author": "William Abboud",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/william-abboud/S.W.E.A.T/issues"
+  },
+  "homepage": "https://github.com/william-abboud/S.W.E.A.T#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.11.2",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "mkdirp": "^0.5.1"
+  }
+}
