@@ -11,43 +11,45 @@ const babelify = require('babelify');
 const browserSync = require('browser-sync').create();
 
 gulp.task('dist', () => {
-    mkdirp('./dist');
+  mkdirp('./dist');
 });
 
 gulp.task('html', () => {
-    return gulp.src('src/**/*.html')
-        .pipe(gulp.dest('dist'))
-        .pipe(browserSync.stream());
+  return gulp.src('src/**/*.html')
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js', () => {
-    browserify('src/scripts/main.js')
-        .transform(babelify, {presets: ["es2015"]})
-        .bundle()
-        .pipe(fs.createWriteStream('dist/bundled.js'));
+  browserify('src/scripts/main.js')
+    .transform(babelify, {presets: ["es2015"]})
+    .bundle()
+    .pipe(fs.createWriteStream('dist/bundled.js'));
 
-    browserSync.reload();
+  browserSync.reload();
 });
 
 gulp.task('sass', () => {
-    return gulp
-        .src('src/styles/main.scss')
-        .pipe(sass())
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-        .pipe(gulp.dest('dist'))
-        .pipe(browserSync.stream());
+  return gulp
+    .src('src/styles/main.scss')
+    .pipe(sass())
+    .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
+    .pipe(gulp.dest('dist'))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('watch', ['html', 'js', 'sass'], () => {
-    gulp.watch('src/**/*.js', ['js'], browserSync.reload);
-    gulp.watch('src/**/*.html', ['html'], browserSync.reload);
-    gulp.watch('src/**/*.scss', ['sass']);
+  gulp.watch('src/**/*.js', ['js'], browserSync.reload);
+  gulp.watch('src/**/*.html', ['html'], browserSync.reload);
+  gulp.watch('src/**/*.scss', ['sass']);
 });
 
 gulp.task('serve', ['dist', 'watch'], () => {
-    browserSync.init({
-        server: {
-            baseDir: 'dist'
-        }
-    });
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
+    }
+  });
 });
+
+gulp.task('default', ['serve']);
