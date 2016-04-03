@@ -1,59 +1,57 @@
-button, .primary-btn,.btn, .form-btn {
+button, .btn {
   text-transform: uppercase;
-}
-
-.btn-large {
-    font-size: 2.7rem;
-    border-width: 5px;
-}
-
-.btn-medium {
-    font-size: 2rem;
-    border-width: 3px;
-}
-
-.btn-small {
-    font-size: 1.2rem;
-    border-width: 1px;
-}
-
-button,.primary-btn {
-  background: $white-500;
-  border: 1px solid $black-400;
+  background: transparent;
+  border: $border-width-medium solid $primary-color;
   box-shadow: 1px 1px 1px $black-400;
   display: inline-block;
-  margin: 0 2rem;
   padding: 0.7rem 1.3rem;
-}
-
-.rounded-btn {
-  background: $yellow-500;
-  border-radius: 1.8rem;
-  box-shadow: 1px 1px 2px $black-400;
-  display: inline-block;
-  padding: 0.7rem 1.3rem;
-  transform: scale(1);
-  transition: 0.1s all ease-in-out;
-
-  &:hover {
-    transform: scale(0.9);
-    transition: 0.1s all ease-in-out;
-  }
-}
-
-.smooth-btn {
-  background: none;
-  border-color: $yellow-500;
-  border-style: solid;
-  box-shadow: none;
-  color: $yellow-500;
-  margin-left: 50px;
-  padding: 7px 13px;
+  color: $primary-color;
   transition: 0.1s all ease-in-out;
 
   &:hover {
     background: $yellow-500;
     color: $black-500;
-    transition: 0.1s all ease-in-out;
+  }
+}
+
+.btn-large {
+  @extend .btn;
+
+  font-size: 2.7rem;
+  border-width: $border-width-large;
+}
+
+.btn-medium {
+  @extend .btn;
+
+  font-size: 2rem;
+  border-width: $border-width-medium;
+}
+
+.btn-small {
+  @extend .btn;
+
+  font-size: 1.2rem;
+  border-width: $border-width-small;
+}
+
+.buttons-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .btn {
+    margin: 0 1rem;
+  }
+
+  &--vertical {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      margin: 1.5rem 0;
+    }
   }
 }
