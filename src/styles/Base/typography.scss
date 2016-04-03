@@ -1,48 +1,39 @@
 /* Styles for fonts, line-height, paragraphs, h1, h2, h3 ... */
 html {
-  line-height: 1.5;
   font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  line-height: 1.5;
   font-family: $font-text;
   text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3 {
-  font-family: $font-heading;
+body {
+  font-size: $base-size#{$base-unit};
+  line-height: $base-line-height;
 }
 
-/* Vertical Rhythm TODO: Mixin it */
+/* Vertical Rhythm */
+
 h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.2;
+  @include heading(2,rem);
 }
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.33;
+  @include heading(1.8,rem);
 }
 
 h3 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.5;
+  @include heading(1.6,rem);
 }
 
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dd,
-p, figure,
-pre, table, fieldset, hr {
-  margin: 0.75rem 0;
+h4 {
+  @include heading(1.4,rem);
 }
 
 p {
-  font-family: $font-text;
+  margin: 1.5rem 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-heading;
 }
 
 a, button, span {
