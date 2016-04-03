@@ -4,10 +4,20 @@ $font-heading: 'PT Serif', serif;
 $font-links: 'Montserrat', sans-serif;
 
 /* Colors */
-$black: #1F1C17;
-$yellow: #FFA10C;
-$brown: #593C1A;
-$white: #FAFAFA;
+$black-500: #1F1C17;
+$black-400: #1d1d1d;
 
-$primary-color: $yellow;
-$secondary-color: $brown;
+$brown-500: #593C1A;
+$brown-400: #c09569;
+
+$gray-500: #3d3d3d;
+
+$white-500: #fbfbfb;
+$white-100: #FAFAFA;
+
+$yellow-500: #ffc900;
+$yellow-300: #FFA10C;
+$yellow-400: #ffedb5;
+
+$primary-color: $yellow-500;
+$secondary-color: $brown-500;
