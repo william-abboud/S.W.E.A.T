@@ -19,8 +19,14 @@ $white-500: #fbfbfb;
 $white-100: #FAFAFA;
 
 $yellow-500: #ffc900;
-$yellow-300: #FFA10C;
-$yellow-400: #ffedb5;
+$yellow-300: #ffedb5;
+$yellow-400: #e5b400;
+$yellow-200: #FFA10C;
 
 $primary-color: $yellow-500;
 $secondary-color: $brown-500;
+
+/* Responsive viewport variables  */
+$media-lg: 120rem;
+$media-md: 76rem;
+$media-small: 32rem;

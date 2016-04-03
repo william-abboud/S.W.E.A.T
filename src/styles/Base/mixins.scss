@@ -5,3 +5,9 @@
   line-height: $vertical-spacing;
   margin: $vertical-spacing#{$unit} 0;
 }
+
+@mixin media($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
