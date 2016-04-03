@@ -1,0 +1,7 @@
+@mixin heading($font-size, $unit) {
+  $vertical-spacing: ( $base-size * $base-line-height ) / $font-size;
+
+  font-size: $font-size#{$unit};
+  line-height: $vertical-spacing;
+  margin: $vertical-spacing#{$unit} 0;
+}
