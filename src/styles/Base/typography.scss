@@ -6,7 +6,9 @@ html {
 
 body {
   font-size: 1.6rem;
+  line-height: 2.56rem; /* Golden Ratio * base-size */
   font-family: $font-text;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3 {
