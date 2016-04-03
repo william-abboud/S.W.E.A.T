@@ -1,0 +1,19 @@
+.intro {
+  display: flex;
+  height: 50rem;
+  color: $white-500;
+  background: url(https://images.unsplash.com/photo-1437935690510-49ce2c715aee?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=105f6747203e7fe4de1361cd5a5d52ac);
+  clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0  0);
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0, 0.5);
+  background-repeat: no-repeat;
+  text-align: center;
+
+  &__text {
+    max-width: 60%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
