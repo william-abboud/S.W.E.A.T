@@ -7,7 +7,7 @@
 }
 
 @mixin media($media) {
-  @media only screen and (min-widthw: $media) {
+  @media only screen and (min-width: $media) {
     @content;
   }
 }
