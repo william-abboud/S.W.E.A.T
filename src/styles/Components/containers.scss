@@ -1,0 +1,36 @@
+%vertical-container {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+%horizontal-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+%vertical-container--centered-vertically {
+  @extend %vertical-container;
+
+  justify-content: center;
+}
+
+%vertical-container--centered-horizontally {
+  @extend %vertical-container;
+
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+%full-width-container {
+  width: 100%;
+}
+
+
+.fixed-width-container {
+  @include media($media-md) {
+    max-width: $centered-max-page-width;
+  }
+}

@@ -1,0 +1,14 @@
+.section-main-title, .section-secondary-title {
+  text-transform: uppercase;
+}
+
+.section-main-title {
+  @include spaced-heading(h1);
+
+  margin-bottom: 0;
+}
+
+.section-secondary-title {
+  @include spaced-heading(h2);
+}
+

@@ -13,23 +13,23 @@ body {
 /* Vertical Rhythm */
 
 h1 {
-  @include heading(2,rem);
+  @include heading(3.0,rem);
 }
 
 h2 {
-  @include heading(1.8,rem);
+  @include heading(2.4,rem);
 }
 
 h3 {
-  @include heading(1.6,rem);
+  @include heading(2.0,rem);
 }
 
 h4 {
-  @include heading(1.4,rem);
+  @include heading(1.8,rem);
 }
 
 p {
-  margin: 1.5rem 0;
+  margin: 1.6rem 0;
 }
 
 h1, h2, h3, h4 {
@@ -38,4 +38,12 @@ h1, h2, h3, h4 {
 
 a, button, span {
   font-family: $font-links;
+}
+
+.text--light {
+  color: $white-500;
+}
+
+.text--dark {
+  color: $black-500;
 }

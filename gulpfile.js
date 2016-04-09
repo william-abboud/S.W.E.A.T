@@ -20,6 +20,12 @@ gulp.task('html', () => {
     .pipe(browserSync.stream());
 });
 
+gulp.task('images', () => {
+  return gulp.src('src/images/**/*')
+    .pipe(gulp.dest('dist/images'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('js', () => {
   browserify('src/scripts/main.js')
     .transform(babelify, {presets: ["es2015"]})
@@ -38,7 +44,7 @@ gulp.task('sass', () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('watch', ['html', 'js', 'sass'], () => {
+gulp.task('watch', ['html', 'js', 'sass', 'images'], () => {
   gulp.watch('src/**/*.js', ['js'], browserSync.reload);
   gulp.watch('src/**/*.html', ['html'], browserSync.reload);
   gulp.watch('src/**/*.scss', ['sass']);

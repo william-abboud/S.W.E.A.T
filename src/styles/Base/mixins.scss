@@ -7,7 +7,26 @@
 }
 
 @mixin media($media) {
-  @media only screen and (min-width: $media) {
+  //  * 0.625 Because of rem
+  @media only screen and (min-width: ($media * 0.625) ) {
     @content;
+  }
+}
+
+@mixin spaced-heading($h) {
+  @if ($h == h1) {
+    letter-spacing: 1rem;
+  }
+
+  @if ($h == h2) {
+    letter-spacing: 0.8rem;
+  }
+
+  @if ($h == h3) {
+    letter-spacing: 0.6rem;
+  }
+
+  @if ($h == h4) {
+    letter-spacing: 0.4rem;
   }
 }
