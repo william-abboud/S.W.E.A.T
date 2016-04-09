@@ -36,8 +36,8 @@ button, .btn {
 }
 
 .buttons-container {
-  display: flex;
-  flex-flow: row nowrap;
+  //@include horizontalFlexContainer();/**/
+
   align-items: center;
 
   .btn {
@@ -45,8 +45,8 @@ button, .btn {
   }
 
   &--vertical {
-    display: flex;
-    flex-flow: column nowrap;
+    //@include verticalFlexContainer();
+
     justify-content: center;
     align-items: center;
 

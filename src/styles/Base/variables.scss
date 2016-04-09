@@ -29,9 +29,14 @@ $secondary-color: $brown-500;
 /* Responsive viewport variables  */
 $media-lg: 120rem;
 $media-md: 76rem;
-$media-small: 32rem;
+$media-small: 50rem;
 
-/* Misc */
+$section-height: 50rem;
+
+/* Borders */
 $border-width-large: 5px;
 $border-width-medium: 3px;
 $border-width-small: 1px;
+
+/* Widths */
+$centered-max-page-width: 90rem;

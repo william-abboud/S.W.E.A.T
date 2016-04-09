@@ -1,0 +1,106 @@
+%_vertical-container-center-both {
+  @extend %vertical-container--centered-vertically;
+  @extend %vertical-container--centered-horizontally;
+  @extend %full-width-container;
+  @extend .text-center;
+
+  max-width: 128rem;
+}
+
+%_clipped-background-container--absolute {
+  @extend %_clipped-background-container;
+
+  position: absolute;
+  z-index: -1;
+}
+
+%_clipped-background-container {
+  background: {
+    position: center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  min-height: $section-height;
+}
+
+.intro {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container;
+
+  background-image: url(images/fit-man-mobile.jpg);
+  clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+}
+
+.intro-secondary {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container--absolute;
+
+  top: 37rem;
+  background-image: url(images/fit-woman.jpeg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 81%);
+}
+
+.intro-workout-generator {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container--absolute;
+
+  background-image: url(images/rugby-girl.jpeg);
+  clip-path: polygon(0 0, 100% 20%, 100% 75%, 0% 100%);
+  top: 75rem;
+}
+
+
+.intro-workout-statistics {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container--absolute;
+
+  background-image: url(images/chart.jpeg);
+  clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 75%);
+  top: 112rem;
+}
+
+.intro-features {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container--absolute;
+
+  background-image: url(images/features.jpeg);
+  clip-path: polygon(60% 8%, 100% 13%, 100% 75%, 50% 100%, 0% 75%, 0 0);
+  top: 149rem;
+
+  .features {
+    @extend %_vertical-container-center-both;
+
+    @include media($media-md) {
+      flex-flow: row nowrap;
+      align-items: flex-end;
+    }
+
+    li {
+      flex: 1;
+    }
+  }
+}
+
+.intro-footer {
+  @extend %_vertical-container-center-both;
+  @extend %_clipped-background-container--absolute;
+
+  background: $black-500;
+  top: 185rem;
+  z-index: -2;
+
+  nav {
+    @extend %full-width-container;
+  }
+}
+
+.footer-nav {
+  @extend %horizontal-list;
+  @extend .text--light;
+
+  justify-content: space-between;
+
+  .list-item {
+    flex: 1;
+  }
+}
